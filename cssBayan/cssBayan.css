@@ -1,16 +1,48 @@
 
-summary {
+body {
+  background-color: darkgray;
+}
+
+div.meme-container {
+  background-color: rgb(2, 109, 98);
+}
+
+div.meme-content {
+  display: none;
+  background-color: darkgrey;
+}
+
+input {
+  display: none;
+  background-color: darkgrey;
+}
+
+div.meme-container:hover > div.meme-content {
   display: block;
 }
 
-summary::after {
-  display: inline-block;
-  margin-left: 60px;
-  transition: 0.5s;
-  content: '\232A';
+div.meme-container:hover > input {
+  display: block;
 }
 
-details[open] summary::after {
-  transform: rotate(90deg);
+input:checked + div {
+  display: block;
 }
 
+input:checked {
+  display: block;
+}
+
+img.meme-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: auto;
+}
+
+input {
+  opacity: 0.5;
+  height: 200px;
+  width: 100%;
+}
