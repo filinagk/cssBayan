@@ -10,19 +10,33 @@ div.meme-container {
 div.meme-content {
   display: none;
   background-color: darkgrey;
+  z-index: 1;
+}
+
+div.format-container {
+  width: 100%;
+  position: relative;
 }
 
 input {
   display: none;
   background-color: darkgrey;
+  z-index: 10;
 }
 
-div.meme-container:hover > div.meme-content {
+div.meme-container:hover div.meme-content {
   display: block;
+  width: auto;
+  height: 200px;
 }
 
-div.meme-container:hover > input {
+div.meme-container:hover input {
   display: block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 input:checked + div {
@@ -31,6 +45,11 @@ input:checked + div {
 
 input:checked {
   display: block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 img.meme-image {
@@ -42,7 +61,7 @@ img.meme-image {
 }
 
 input {
-  opacity: 0.5;
+  opacity: 0;
   height: 200px;
   width: 100%;
 }
