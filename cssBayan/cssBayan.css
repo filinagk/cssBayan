@@ -1,0 +1,16 @@
+
+summary {
+  display: block;
+}
+
+summary::after {
+  display: inline-block;
+  margin-left: 60px;
+  transition: 0.5s;
+  content: '\232A';
+}
+
+details[open] summary::after {
+  transform: rotate(90deg);
+}
+
