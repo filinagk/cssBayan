@@ -1,10 +1,18 @@
-
 body {
   background-color: darkgray;
 }
 
 div.meme-container {
   background-color: rgb(2, 109, 98);
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+div.format-container {
+  width: 100%;
+  position: relative;
 }
 
 div.meme-content {
@@ -13,34 +21,10 @@ div.meme-content {
   z-index: 1;
 }
 
-div.format-container {
-  width: 100%;
-  position: relative;
-}
-
 input {
   display: none;
   background-color: darkgrey;
   z-index: 10;
-}
-
-div.meme-container:hover div.meme-content {
-  display: block;
-  width: auto;
-  height: 200px;
-}
-
-div.meme-container:hover input {
-  display: block;
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-input:checked + div {
-  display: block;
 }
 
 input:checked {
@@ -64,4 +48,34 @@ input {
   opacity: 0;
   height: 200px;
   width: 100%;
+}
+
+div.meme-container:hover div.meme-content {
+  display: block;
+  width: auto;
+  height: 200px;
+}
+
+div.meme-container:hover div.open-element {
+  transform-origin: -17px 200px;
+transform: rotate(90deg);
+
+  display: block;
+  position: relative;
+  top: -17px;
+  left: 200px;
+  height: 0;
+}
+
+div.meme-container:hover input {
+  display: block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input:checked+div {
+  display: block;
 }
