@@ -5,7 +5,7 @@ body {
 h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: rgb(185, 135, 29);
-  color:rgb(24, 72, 128);
+  color: rgb(24, 72, 128);
   font-size: 65px;
 }
 
@@ -26,6 +26,7 @@ img.open-close-icon {
   height: 5%;
   float: right;
   top: -35px;
+  transition: transform 1s;
 }
 
 div.format-container {
@@ -70,16 +71,19 @@ input {
   width: 100%;
 }
 
-div.meme-container:hover div.meme-content {
-  display: block;
-  width: auto;
-  height: 200px;
-  opacity: 1;
-  transition: opacity 5s;
+@media (hover: hover) {
+  div.meme-container:hover div.meme-content {
+    display: block;
+    width: auto;
+    height: 200px;
+    opacity: 1;
+  }
 }
 
-div.meme-container:hover img.open-close-icon {
-  transform: rotate(45deg);
+@media (hover: hover) {
+  div.meme-container:hover img.open-close-icon {
+    transform: rotate(45deg);
+  }
 }
 
 input:checked+div.meme-content {
