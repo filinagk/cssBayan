@@ -3,13 +3,16 @@ body {
 }
 
 div.meme-container {
-  background-color: rgb(2, 109, 98);
-    text-align: left;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-  }
+  background-color: rgb(24, 72, 128);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  color: rgb(185, 135, 29);
+  text-align: left;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
 
 div.format-container {
   width: 100%;
@@ -60,7 +63,7 @@ div.meme-container:hover div.meme-content {
 
 div.meme-container:hover div.open-element {
   transform-origin: -17px 200px;
-transform: rotate(90deg);
+  transform: rotate(90deg);
 
   display: block;
   position: relative;
@@ -80,4 +83,11 @@ div.meme-container:hover input {
 
 input:checked+div {
   display: block;
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(185, 135, 29);
+  color:rgb(24, 72, 128);
+  font-size: 65px;
 }
