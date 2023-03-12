@@ -1,0 +1,107 @@
+body {
+  background-color: darkgray;
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(185, 135, 29);
+  color: rgb(24, 72, 128);
+  font-size: 65px;
+}
+
+div.meme-container {
+  background-color: rgb(24, 72, 128);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  color: rgb(185, 135, 29);
+  text-align: left;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+img.open-close-icon {
+  position: relative;
+  height: 5%;
+  float: right;
+  top: -35px;
+  transition: transform 1s;
+}
+
+div.format-container {
+  width: 100%;
+  position: relative;
+}
+
+div.meme-content {
+  display: none;
+  background-color: darkgrey;
+  z-index: 1;
+  opacity: 0;
+}
+
+input {
+  display: none;
+  background-color: darkgrey;
+  z-index: 10;
+  cursor: pointer;
+}
+
+input:checked {
+  display: block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img.meme-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: auto;
+}
+
+input {
+  opacity: 0;
+  height: 200px;
+  width: 100%;
+}
+
+@media (hover: hover) {
+  div.meme-container:hover div.meme-content {
+    display: block;
+    width: auto;
+    height: 200px;
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  div.meme-container:hover img.open-close-icon {
+    transform: rotate(45deg);
+  }
+}
+
+input:checked+div.meme-content {
+  display: block;
+  width: auto;
+  height: 200px;
+  opacity: 1;
+}
+
+input:checked+img.open-close-icon {
+  transform: rotate(45deg);
+}
+
+div.meme-container:hover input {
+  display: block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
